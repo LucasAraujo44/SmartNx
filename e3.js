@@ -5,4 +5,4 @@ function argumentos() {
     })
     console.log(somaArgumentos)
 }
-argumentos('Olá', 'Lucas', 'Araujo', '!')
+argumentos('Olá', 'Lucas', 'Araujo')
