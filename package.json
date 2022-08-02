@@ -1,0 +1,22 @@
+{
+  "name": "smartnx",
+  "version": "1.0.0",
+  "description": "Prova - Estágio Back-End - Julho/2022",
+  "main": "e6.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LucasAraujo44/SmartNx.git"
+  },
+  "author": "Lucas araujo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LucasAraujo44/SmartNx/issues"
+  },
+  "homepage": "https://github.com/LucasAraujo44/SmartNx#readme",
+  "dependencies": {
+    "axios": "^0.27.2"
+  }
+}
