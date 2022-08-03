@@ -74,7 +74,7 @@ DB_COLLECTION =
 ```
 <br>
 
-# Employee Endpoints
+# Post Endpoints
 
 ## Create Employee
 `POST`
@@ -213,7 +213,7 @@ http://localhost:3000/api/v1/post/:id
 ```
 <br>
 
-## Delete Employee
+## Delete post
 `DELETE`
 ```
  {
@@ -238,5 +238,182 @@ http://localhost:3000/api/v1/post/:id
     ]
 }
 ```
+<br>
+# comments Endpoints
+
+## Create Comment
+`POST`
+```
+http://localhost:3000/api/v1/post/id/comment
+```
+### Body Example
+```
+{
+    "id_post": "62ea714727611662123ebfd9",
+    "comments": "Teste api444"
+}
+```
+`Status Code: 201 Created`
+```
+{
+    "id_post": "62ea714727611662123ebfd9",
+    "comments": "Teste api444",
+    "_id": "62ea83820395a37ad57fc596",
+    "__v": 0
+}
+```
+`Status Code: 400 Bad Request`
+```
+{
+    "message": "Bad Request",
+    "details": [
+        {
+            "message": "error.messsage of the req"
+        }
+    ]
+}
+```
+<br>
+## List Post
+`GET`
+
+```
+http://localhost:3000/api/v1/post/id/comment 
+```
+### Body Example
+```
+{
+    "Comments": [
+        {
+            "_id": "62ea7e58a1079ee489d46e7c",
+            "id_post": "62ea714727611662123ebfd9",
+            "comments": "Teste api",
+            "__v": 0
+        },
+        {
+            "_id": "62ea7e5fa1079ee489d46e7e",
+            "id_post": "62ea714727611662123ebfd9",
+            "comments": "Teste api444",
+            "__v": 0
+        },
+        {
+            "_id": "62ea83630395a37ad57fc594",
+            "id_post": "62ea714727611662123ebfd9",
+            "comments": "Teste api444",
+            "__v": 0
+        },
+        {
+            "_id": "62ea83820395a37ad57fc596",
+            "id_post": "62ea714727611662123ebfd9",
+            "comments": "Teste api444",
+            "__v": 0
+        },
+        {
+            "_id": "62ea87616cefc1c81f3babec",
+            "id_post": "62ea714727611662123ebfd9",
+            "comments": "Teste api444",
+            "__v": 0
+        },
+        {
+            "_id": "62ea87866cefc1c81f3babef",
+            "id_post": "62ea714727611662123ebfd9",
+            "comments": "Teste api444",
+            "__v": 0
+        },
+        {
+            "_id": "62ea87886cefc1c81f3babf1",
+            "id_post": "62ea714727611662123ebfd9",
+            "comments": "Teste api4a44",
+            "__v": 0
+        }
+    ],
+    "total": 7,
+    "limit": 20,
+    "totalPages": 1,
+    "offsets": 1
+}
+```
+## List Comment by ID
+  `GET`
+```
+http://localhost:3000/api/v1/post/:id/comment
+```
+### Res
+`Status Code: 200 OK`
+```
+{
+    "_id": "62ea7e5fa1079ee489d46e7e",
+    "id_post": "62ea714727611662123ebfd9",
+    "comments": "Teste api444",
+    "__v": 0
+}
+```
+`Status Code: 400 Bad Request`
+```
+{
+    "description": "Not Found",
+    "message": "Id 62ea74c327611662123ebfe6 not found"
+}
+```
+<br>
+
+## Update Comment
+`PUT`
+```
+http://localhost:3000/api/v1/post/:id/comment
+```
+### Body Example
+```
+ {
+    "id_post": "62ea714727611662123ebfd9",
+    "comments": "Teste api 22"
+}
+```
+`Status Code: 200 OK`
+```
+{
+    "message": "Success",
+    "details": [
+        {
+            "message": "The id was successfully Updated"
+        }
+    ]
+}
+```
+`Status Code: 404 Bad Request`
+```
+{
+    "description": "Not Found",
+    "message": "Id 62ea74c327611662123ebfe6 not found"
+}
+```
+<br>
+
+## Delete Comment
+`DELETE`
+```
+ {
+    "message": "Success",
+    "details": [
+        {
+            "message": "The id was successfully deleted"
+        }
+    ]
+} 
+```
+`Status Code: 200 OK`
+
+`Status Code: 400 Bad Request`
+```
+{
+    "message": "Success",
+    "details": [
+        {
+            "message": "The id was successfully deleted"
+        }
+    ]
+}
+```
+
 <br>
 
