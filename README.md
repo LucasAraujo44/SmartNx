@@ -274,7 +274,8 @@ http://localhost:3000/api/v1/post/id/comment
 }
 ```
 <br>
-## List Post
+
+## List Comment
 `GET`
 
 ```
