@@ -6,7 +6,7 @@ class PostRepository {
     async list(payload) {
         const paginateFields = {
             totalDocs: "total",
-            docs: "Person",
+            docs: "Post",
             page: "offsets",
             nextPage: false,
             prevPage: false,
